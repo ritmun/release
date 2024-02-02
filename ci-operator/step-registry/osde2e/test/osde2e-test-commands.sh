@@ -16,7 +16,15 @@ then
     exit 1
 fi
 
+CLUSTER_ID=""
+
+if [[ -f "${SHARED_DIR}/cluster-id" ]];
+then
+    CLUSTER_ID=`cat ${SHARED_DIR}/cluster-id`
+fi
+
 export REPORT_DIR="${ARTIFACT_DIR}"
 
 /osde2e test --configs "${CONFIGS}" \
---secret-locations "${SECRET_LOCATIONS}"
+--secret-locations "${SECRET_LOCATIONS}" \
+--cluster-id "${CLUSTER_ID}"
