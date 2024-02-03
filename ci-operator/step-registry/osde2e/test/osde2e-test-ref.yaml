@@ -11,6 +11,9 @@ ref:
       memory: 200Mi
   timeout: 3h0m0s
   env:
+    - name: CLUSTER_PROFILE_DIR
+      default: ""
+      documentation: "Var required as placeholder to pass on to openshift-e2e-test, when needed"
     - name: CONFIGS
       default: ""
       documentation: "Comma separated list of pre-canned configs provided out of the box by osde2e."
