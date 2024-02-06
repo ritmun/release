@@ -5,6 +5,9 @@ ref:
   commands: openshift-e2e-test-commands.sh
   timeout: 14400s
   env:
+  - name: CLUSTER_PROFILE_DIR
+    default: ""
+    documentation: Default env var, points to cluster profile directory.
   - name: TEST_ARGS
     default: ""
     documentation: |-
