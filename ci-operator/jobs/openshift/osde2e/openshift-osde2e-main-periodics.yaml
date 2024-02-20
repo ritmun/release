@@ -289,6 +289,8 @@ periodics:
         value: <region>
       - name: CONFIGS
         value: gcp,stage,sanity
+      - name: OCM_COMPUTE_MACHINE_TYPE
+        value: e2-standard-4
       - name: POLLING_TIMEOUT
         value: "7200"
       - name: SECRET_LOCATIONS
